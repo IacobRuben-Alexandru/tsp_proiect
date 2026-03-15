@@ -1,0 +1,7 @@
+*.png
+*.txt
+!requirements.txt
+!orase.txt
+.vscode/
+.venv/
+__pycache__/

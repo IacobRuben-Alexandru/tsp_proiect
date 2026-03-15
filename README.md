@@ -114,7 +114,7 @@ python src/main.py solve orase.txt --algo bt
 ### Hill Climbing (cu parametri custom)
 
 ```bash
-python src/main.py solve orase.txt --algo hc --restarts 50 --iterations 3000
+python src/main.py solve orase.txt --algo hc --restarts 30 --iterations 3000
 ```
 
 ---

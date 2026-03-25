@@ -1,3 +1,5 @@
+from typing import Iterable, List, Sequence, Tuple
+
 def citeste_matrice(cale_fisier):
     """Citeste matricea de distante dintr-un fisier text.
 
@@ -28,7 +30,20 @@ def citeste_matrice(cale_fisier):
         raise ValueError(f"Formatul fisierului este invalid: {e}")
 
     return n, matrice
+def formateaza_traseu(traseu: Sequence[int]) -> str:
+	"""Formateaza traseul pentru afisare, inchizand turul (revenire la start).
 
+	Args:
+		traseu: Secventa de orase in ordinea vizitarii (de obicei incepe cu 0).
+
+	Returns:
+		Un string de forma "0 -> 1 -> 3 -> 2 -> 0".
+	"""
+	if not traseu:
+		return ""
+	parts = [str(x) for x in traseu]
+	parts.append(str(traseu[0]))
+	return " -> ".join(parts)
 def salveaza_rezultat(cale_fisier, traseu, cost, timp):
     """Salveaza rezultatele algoritmului intr-un fisier text.
 
